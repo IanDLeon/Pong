@@ -43,7 +43,7 @@ export default class Ball {
     this.velocity = INITIAL_VELOCITY // specify velocity
   }
 
-  update(delta, paddleRects) {
+  update(delta, paddleRects) { // passing the paddle rectangles
     this.x += this.direction.x * this.velocity * delta // add the direction we are going on our x value
     this.y += this.direction.y * this.velocity * delta
     this.velocity += VELOCITY_INCREASE * delta // this will increase the velocity every time it hits the wall.
@@ -53,7 +53,7 @@ export default class Ball {
       this.direction.y *= -1// we are flipping the y direction so when it hits the top of the screen it moves downwards and bottom move upwards.
     }
 
-    if (paddleRects.some(r => isCollision(r, rect))) {
+    if (paddleRects.some(r => isCollision(r, rect))) { // this loops through all of the diff paddle rectangles if any of them return true for the collision function is going to return true for the whole thing.
       this.direction.x *= -1
     }
   }
@@ -62,12 +62,12 @@ export default class Ball {
 function randomNumberBetween(min, max) {
   return Math.random() * (max - min) + min // using max minus min to make sure that it scales with the value to be within our range and add the min making sure the minimum is the lowest number we can get
 }
-
-function isCollision(rect1, rect2) {
+// checking for a collision with any of the paddles if so swap the x direction 
+function isCollision(rect1, rect2) { // taking in rect 1 and rect 2
   return (
-    rect1.left <= rect2.right &&
-    rect1.right >= rect2.left &&
-    rect1.top <= rect2.bottom &&
-    rect1.bottom >= rect2.top
+    rect1.left <= rect2.right && // checking if the left side is less that or equal to the right side of the rect 2 
+    rect1.right >= rect2.left && // check all the side of rect 1 if right side is greater than or equal to the left side of rect 2
+    rect1.top <= rect2.bottom && // top is less than or equal to rect two 
+    rect1.bottom >= rect2.top // rect bottom is greater than or equal to rect2 top
   )
 }
