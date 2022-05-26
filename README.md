@@ -10,7 +10,7 @@
  * Make it look nice. 
 
  # Objective
-  * The user being able to use the up and down arrow keys.
+  * The user being able to use the mouse to move up and down.
   * Score more than computer
   * Have fun!!
 
