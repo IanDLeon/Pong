@@ -68,5 +68,15 @@ body {
 
 .score > :first-child { /*--Aligns the scores back together--*/
   text-align: right;
-  border-right: .5vh solid var(--foreground-color); 
+  border-right: .5vh solid var(--foreground-color);
+ 
 }
+
+.button {
+  justify-content: center;
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 3;
+  margin-left: 250px;
+}
+
