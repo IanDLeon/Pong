@@ -4,7 +4,7 @@
 
 :root { /*--css variables that goes across our entire app--*/
   --hue: 200; /*-- hue is ussing values from 0 to 360 --*/
-  --saturation: 20%; /*--We can change the value for it to change the colors that we want to display --*/
+  --saturation: 8%; /*--We can change the value for it to change the colors that we want to display --*/
   --foreground-color: hsl(var(--hue), var(--saturation), 75%); /*--using hsl lets us use the hue, color staturation and lightness --*/ 
   --background-color: hsl(var(--hue), var(--saturation), 20%);
 }
@@ -54,6 +54,7 @@ body {
   font-weight: bold;
   font-size: 7vh; /*-- font size using 7vh to scale to the screen  --*/
   color: var(--foreground-color);
+  font-family:  'Press Start 2P', cursive;
 }
 
 /*-- Style score getting every single direct child  --*/
@@ -73,10 +74,14 @@ body {
 }
 
 .button {
+  display: inline-block;
   justify-content: center;
   border-radius: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  z-index: 3;
-  margin-left: 250px;
+  font-family:  'Press Start 2P', cursive;
+  margin-left: 200px;
+  margin-top: 10px;
+  background-color: var(--foreground-color);
+  color: black;
+  
 }
 
