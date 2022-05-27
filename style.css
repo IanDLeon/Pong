@@ -4,7 +4,7 @@
 
 :root { /*--css variables that goes across our entire app--*/
   --hue: 200; /*-- hue is ussing values from 0 to 360 --*/
-  --saturation: 8%; /*--We can change the value for it to change the colors that we want to display --*/
+  --saturation: 0%; /*--We can change the value for it to change the colors that we want to display --*/
   --foreground-color: hsl(var(--hue), var(--saturation), 75%); /*--using hsl lets us use the hue, color staturation and lightness --*/ 
   --background-color: hsl(var(--hue), var(--saturation), 20%);
 }
